@@ -9,4 +9,6 @@ public class Calculator {
         int diff = firstNumber - secondNumber;
         return diff;
     }
+
+
 }
