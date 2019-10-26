@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="LiteCart tests" parallel="tests" thread-count="1">
+
+    <test name="LiteCart tests Firefox">
+
+        <parameter name="Browser" value="firefox" />
+
+        <classes>
+
+            <class name="CartTests"/>
+            <class name="CreateAccountTests"/>
+
+        </classes>
+
+    </test>
+
+    <test name="Litecart tests Chrome">
+
+        <parameter name="Browser" value="chrome" />
+
+        <classes>
+
+            <class name="CartTests"/>
+            <class name="CreateAccountTests"/>
+
+        </classes>
+
+    </test>
+
+</suite>

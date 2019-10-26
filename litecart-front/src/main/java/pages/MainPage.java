@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,9 +8,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.time.LocalDate;
 import java.util.List;
 
-public class MainPage {
+public class  MainPage {
 
     private static final Logger LOG = Logger.getLogger(MainPage.class);
     protected WebDriver driver;
@@ -36,12 +38,13 @@ public class MainPage {
     public void openSignInForm() {
         signInButton.click();
     }
-
+    @Step("Open create account")
     public CreateAccountPage openCreateAccount() {
         customerCreateButton.click();
         return new CreateAccountPage(driver);
     }
 
+    @Step("Select product type {name}")
     public MainPage selectProductType(String name) {
         LOG.info("Selecting product type....");
         for (WebElement productType : productTypeNavTabs) {
